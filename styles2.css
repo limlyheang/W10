@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    height: 100px;
+}
+
+h1 {
+    color: white;
+    margin-left: 40px;
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 500px;
+    margin-right: 20px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Match nav bar height */
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    h2.show3 {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
